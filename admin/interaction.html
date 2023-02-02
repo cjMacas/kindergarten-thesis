@@ -1,0 +1,118 @@
+<?php include('functions.php') ?>
+<html>
+	<html lang="en" class="animated fadeIn">
+		<title> Home page </title>
+			<link rel="stylesheet" href="style.css" type="text/css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="animate.css" rel="stylesheet">
+			<link rel="stylesheet" href="style3.css" type="text/css">
+
+			</head>
+	<header>
+
+		<!-- this is the navigational bar at top -->
+		<div class="logo">
+			Kindergarten text is here idk
+			<BR>
+	 	</div>
+
+		<div class="navigation">
+
+			<ul>
+				<li><a href="home.php" class="cool"><i class="fa fa-home"></i> Home </a> </li>
+				<li><a href="aboutus.php" class="cool"> <i class="fa fa-address-card"></i> About Us </a>
+				<li class="active"><a class="cool"> <i class="fa fa-book"></i>  Subjects </a> 
+
+				<!-- Dropdown nav of contact us --> 	
+
+					<div class="sub-nav-1">
+						<ul>
+							<li><a href="alphabet.php" class="cool"> Alphabet </a></li>	
+							<li><a href="number.php" class="cool"> Numbers </a></li>
+							<li><a href="scolor.php" class="cool"> Sounds </a></li>	
+							<li><a href="#" class="cool"> Interaction </a></li>						
+						</ul>
+					</div>
+
+				<li><a href="/thesis/login.php" class="cool"> <i class="fa fa-user"></i> Login </a>
+				<li><a href="search.php" class="cool"> <i class="fa fa-search"></i> Search </a>
+					<li><?php  if (isset($_SESSION['user'])) : ?>
+        			<a><i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+        				<strong><?php echo $_SESSION['user']['username']; ?></strong></a>
+					
+
+						<!-- Dropdown nav of login --> 		
+
+					<div class="sub-nav-1">
+						<ul>
+						  <li> <a href="create_user.php"> Create Users </a> </li>
+						  <li> <a href="usersdata.php"> Users </a> </li>
+					      <li> <a href="home.php?logout='1'" style="color: red;"> EXIT </a> </li>
+   							 <?php endif ?>	</a>
+
+						</ul>
+					</div>
+
+</header>
+
+<body>
+
+					
+
+
+					
+						<div class="videos">
+						
+						<br><br><bR>
+
+						<h1> Guess the Object  </h1>
+											
+
+						<iframe width="450" height="300" src="https://www.youtube.com/embed/Egsmiz_Y2OM" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+						<iframe width="450" height="300" src="https://www.youtube.com/embed/MaramdPPgws	" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						
+						</div>
+						
+						
+						</div>
+					
+
+				</div>
+			</center>
+		</body>	
+				
+
+						<footer>
+
+
+
+
+
+						<div class="container">
+								Copyright &copy; 2020 Kindergarten 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Contact Us: kindergartenmc39@gmail.com
+						</div>
+
+			</footer>
+						
+						</html>
+
+
+						<?php 
+	 if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: home.php");
+  }
+?>

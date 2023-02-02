@@ -1,0 +1,160 @@
+*{ padding: 0; margin: 0; }
+
+body{
+	background: url(/thesis/images/mainbg.png);	
+	background-size: cover;	
+	background-position: center; 
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+
+}
+header{
+	text-align: center;
+}
+.navigation{
+	background: #0009;	
+	
+}
+
+.navigation ul{
+	display: inline-flex;	
+	list-style: none;	
+	color: #fff;
+}
+
+.navigation ul li{
+	width: 100px;	
+	margin: 10px;	
+	padding: 15px;
+	transition: 0.8s all;
+}
+.navigation ul li a{
+	text-decoration: none;	
+	color: #fff;
+}
+
+.active, .navigation ul li:hover{
+	background: #0009;
+	border-radius: 15px;
+}
+.fa{
+	margin-right: 10px;
+}
+
+.sub-nav-1{
+	display: none;
+}
+
+.navigation ul li:hover .sub-nav-1{
+	position: absolute;
+	display: block;
+	z-index: 99;
+	background: #0009;
+	margin-top: 15px;
+	margin-left: -15px;
+	
+}
+
+.navigation ul li:hover .sub-nav-1 ul{
+	display: block;
+	margin: 10px;
+
+}
+
+.navigation ul li:hover .sub-nav-1 ul li{
+	width: 80px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0px;
+	text-align: left
+}
+
+.navigation ul li:hover .sub-nav-1 ul li:last-child{
+	border-bottom: none;
+
+}
+.navigation ul li:hover .sub-nav-1 ul li a:hover{
+	color: #93838b;
+}
+
+
+
+.logo{
+	position: absolute;
+	top: -60px;
+	background-image: url(images/circle3.png);
+	height: 200px;
+	width: 180px;
+
+}
+
+.cool::after{
+ content: "";
+ display: block;
+ width: 0;
+ height: 2px;
+ background: #fff;
+ transition: width .3s;
+}
+.cool:hover::after{
+ width: 100%;
+ transition: width .3s;
+}
+
+
+.logo1 img{
+	float: left;
+	width: 130px;
+	height: auto;
+	transform: translate(200%,50%);
+}	
+.logo2 img{
+	float: left;
+	width: 130px;
+	height: auto;
+	transform: translate(350%,50%);
+}
+.logo3 img{
+	float: left;
+	width: 130px;
+	height: auto;
+	transform: translate(500%,50%);
+	
+}
+.phonetic1{
+	float: left;
+	margin-top: 3px;
+	font-family: Arial;
+	transform: translate(-103%,1150%);	
+}
+.phonetic2{
+	float: left;
+	margin-top: 3px;
+	font-family: Arial;
+	transform: translate(200%,1150%);	
+}
+.phonetic3{
+	float: left;
+	margin-top: 3px;
+	font-family: Arial;
+	transform: translate(295%,1150%);	
+}
+
+.video{
+	transform: translate(-15%,70%);
+}
+
+.container{
+	width: 100%;
+	margin:0 auto;
+	overflow: auto;
+	text-align: center;
+	padding-top: 5px;
+	background: #0009;	
+	text-align: center;
+	color: #fff;
+	height: 40px;
+}

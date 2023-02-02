@@ -1,0 +1,103 @@
+<?php include('functions.php') ?>
+<html>
+	<html lang="en" class="animated fadeIn">
+		<title> Home page </title>
+			<link rel="stylesheet" href="style.css" type="text/css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="animate.css" rel="stylesheet">
+			<link rel="stylesheet" href="style3.css" type="text/css">
+
+			</head>
+	<header>
+
+		<!-- this is the navigational bar at top -->
+		<div class="logo">
+			Kindergarten text is here idk
+			<BR>
+	 	</div>
+
+		<div class="navigation">
+
+			<ul>
+				<li><a href="home.php" class="cool"><i class="fa fa-home"></i> Home </a> </li>
+				<li><a href="aboutus.php" class="cool"> <i class="fa fa-address-card"></i> About Us </a>
+				<li class="active"><a class="cool"> <i class="fa fa-book"></i>  Subjects </a> 
+
+				<!-- Dropdown nav of contact us --> 	
+
+					<div class="sub-nav-1">
+						<ul>
+							<li><a href="alphabet.php" class="cool"> Alphabet </a></li>	
+							<li><a href="#" class="cool"> Numbers </a></li>
+							<li><a href="sound.php" class="cool"> Sounds </a></li>	
+							<li><a href="interaction.php" class="cool"> Interaction </a></li>						
+						</ul>
+					</div>
+
+				<li><a href="/thesis/login.php" class="cool"> <i class="fa fa-user"></i> Login </a>
+				<li><a href="search.php" class="cool"> <i class="fa fa-search"></i> Search </a>
+					<li><?php  if (isset($_SESSION['user'])) : ?>
+        			<a><i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+        				<strong><?php echo $_SESSION['user']['username']; ?></strong></a>
+					
+
+						<!-- Dropdown nav of login --> 		
+
+					<div class="sub-nav-1">
+						<ul>
+						  <li> <a href="create_user.php"> Create Users </a> </li>
+						  <li> <a href="usersdata.php"> Users </a> </li>
+					      <li> <a href="home.php?logout='1'" style="color: red;"> EXIT </a> </li>
+   							 <?php endif ?>	</a>
+
+						</ul>
+					</div>
+
+</header>
+
+
+<style>
+table {
+border-collapse: collapse;
+width: 100%;
+color: #0009;
+font-family: monospace;
+font-size: 25px;
+text-align: left;
+}
+th {
+background-color: #0009;
+color: white;
+}
+tr{background-color: white}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<th>Id</th>
+<th>Username</th>
+<th>Email</th>
+<th>Type </th>
+</tr>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "multi_login2");
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT id, username, email, user_type FROM users";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
+. $row["email"]. "</td><td>" . $row["user_type"] . "</td></tr>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>
+</table>
+</body>
+</html>

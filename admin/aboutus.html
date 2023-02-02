@@ -1,0 +1,232 @@
+<?php include('functions.php') ?>
+
+
+<html>
+	<html lang="en" class="animated fadeIn">
+		<title> Home page </title>
+			<link rel="stylesheet" href="style.css" type="text/css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="animate.css" rel="stylesheet">
+			<link rel="stylesheet" href="style1.css" type="text/css">
+
+			</head>
+	<header>
+
+		<!-- this is the navigational bar at top -->
+		<div class="logo">
+			Kindergarten text is here idk
+			<BR>
+	 	</div>
+
+		<div class="navigation">
+
+			<ul>
+				<li><a href="home.php" class="cool"><i class="fa fa-home"></i> Home </a> </li>
+				<li class="active"><a href="aboutus.php" class="cool"> <i class="fa fa-address-card"></i> About Us </a>
+				<li><a class="cool"> <i class="fa fa-book"></i>  Subjects </a> 
+
+				<!-- Dropdown nav of contact us --> 	
+
+					<div class="sub-nav-1">
+						<ul>
+							<li><a href="alphabet.php" class="cool"> Alphabet </a></li>	
+							<li><a href="number.php" class="cool"> Numbers </a></li>
+							<li><a href="scolor.php" class="cool"> Sounds </a></li>	
+							<li><a href="interaction.php" class="cool"> Interaction </a></li>						
+						</ul>
+					</div>
+
+				<li><a href="/thesis/login.php" class="cool"> <i class="fa fa-user"></i> Login </a>
+				<li><a href="search.php" class="cool"> <i class="fa fa-search"></i> Search </a>
+				<li><?php  if (isset($_SESSION['user'])) : ?>
+        			<a><i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+        				<strong><?php echo $_SESSION['user']['username']; ?></strong></a>
+					
+
+						<!-- Dropdown nav of login --> 		
+
+					<div class="sub-nav-1">
+						<ul>
+						  <li> <a href="create_user.php"> Create Users </a> </li>
+						  <li> <a href="usersdata.php"> Users </a> </li>
+					      <li> <a href="home.php?logout='1'" style="color: red;"> EXIT </a> </li>
+   							 <?php endif ?>	</a>
+
+						</ul>
+					</div>
+</header>
+
+<body>
+
+	<div class="mission-h">
+
+		<br><br><br>
+
+		<h1 style="color:#99d4e1" topmargin="20px"> -Our Mission- </h1>
+
+
+
+			<p style="color:#fff">
+
+				Mission to be able to provide basic knowledge to<br
+				>kids about the topic that they will encounter in school.
+
+			</p>
+
+		</div>
+
+
+
+		<div class="about-h">
+
+			<br><br><br>
+	
+			<h1> -About- </h1>
+
+			<p>
+
+				Kindergarten Courseware is an Electronic learning sytem that offers					<br>
+				basic learning materials for children and young ages.  It will give the little		<br>
+				ones an idea on what is being taught or what will be learn in school hence,			<br>
+				it will not be difficult for them to cope up with the lessons. As a fulfilment		<br> 
+				for the requirements as graduating students,  we choose this System for our thesis	<br>
+				because we want to offer the kids something they will enjoy and at the same time	<br>
+				will educate them as they face with their computers. We hope that through this,		<br>
+				we can make parents comfortable in seeing their children							<br>
+				interacting with computers
+
+			</p>
+
+		</div>
+
+	<article>
+
+
+	<div class="tag">
+
+		<h1> Our Team </h1>
+
+	</div>
+
+
+
+	<div class="team">
+
+		<div class="name">
+			<div class="name-img">
+				<img src="/thesis/images/joyce.jpg" alt="joycey">
+			</div>
+			<h3> Baby Joyce Sese </h3>
+			<p class="role"> Researcher/Designer </p>
+			<p> Baby Joyce Sese, Is our Reseacher as
+				Well and Co-Designer she suggested 
+				the system we made.
+
+			</p>
+		</div>
+	<div class="team">
+		<div class="name">
+			<div class="name-img">
+				<img src="/thesis/images/josh.jpg" alt="lul?">
+			</div>
+			<h3> Josh Macas</h3>
+			<p class="role"> Developer/Designer </p>
+			<p> Josh Macas, Our Developer of 
+				the System he mostly did the
+				coding back-end 
+				and front-end
+
+			</p>
+		</div>
+
+
+
+
+
+
+		</div>
+	</div>
+
+	
+
+
+
+	<div class="team">
+
+		<div class="name">
+			<div class="name-img">
+				<img src="/thesis/images/aries.jpg" alt="joycey">
+			</div>
+			<h3> Aries Castillo </h3>
+			<p class="role"> Researcher/Interviewer </p>
+			<p> Aries, Kindergarten Multimedia Courseware
+				Reasearcher he is also our interviewer
+
+			</p>
+		</div>
+	<div class="team">
+		<div class="name">
+			<div class="name-img">
+				<img src="/thesis/images/luna.jpg" alt="lul?">
+			</div>
+			<h3> Aldrin Luna </h3>
+			<p class="role"> Researcher </p>
+			<p> Aldrin, Is also reasearcher of our 
+				project
+
+			</p>
+		</div>
+</div>
+</div>
+
+
+	</article>
+	<section>
+	<div class="tag1">
+		<h1> Social Media</h1>
+	</div>
+	<div class="social">
+		<ul>
+			<li><a href="https://www.facebook.com/ThePUPOfficial/"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="https://twitter.com/thepupofficial?lang=en"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="https://www.pup.edu.ph/"><i class="fa fa-university"></i></a></li>
+			<li><a href="https://www.pup.edu.ph/itech/"><i class="fa fa-graduation-cap"></i></a></li>
+		</ul>
+	</div>
+	
+	</section>
+
+
+			<footer>
+
+
+						<div class="container">
+								Copyright &copy; 2020 Kindergarten 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Contact Us: kindergartenmc39@gmail.com
+						</div>
+
+			</footer>
+				
+		</html>
+
+
+
+
+</body>
+</html>
+
+<?php 
+	 if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: home.php");
+  }
+?>

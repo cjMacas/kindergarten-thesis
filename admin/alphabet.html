@@ -1,0 +1,178 @@
+<?php include('functions.php') ?>
+<html>
+	<html lang="en" class="animated fadeIn">
+		<title> Home page </title>
+			<link rel="stylesheet" href="style.css" type="text/css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="animate.css" rel="stylesheet">
+			<link rel="stylesheet" href="style2.css" type="text/css">
+
+			</head>
+	<header>
+
+		<!-- this is the navigational bar at top -->
+		<div class="logo">
+			Kindergarten text is here idk
+			<BR>
+	 	</div>
+
+		<div class="navigation">
+
+			<ul>
+				<li><a href="home.php" class="cool"><i class="fa fa-home"></i> Home </a> </li>
+				<li><a href="aboutus.php" class="cool"> <i class="fa fa-address-card"></i> About Us </a>
+				<li class="active"><a class="cool"> <i class="fa fa-book"></i>  Subjects </a> 
+
+				<!-- Dropdown nav of contact us --> 	
+
+					<div class="sub-nav-1">
+						<ul>
+							<li><a href="#" class="cool"> Alphabet </a></li>	
+							<li><a href="number.php" class="cool"> Numbers </a></li>
+							<li><a href="scolor.php" class="cool"> Sounds </a></li>	
+							<li><a href="interaction.php" class="cool"> Interaction </a></li>						
+						</ul>
+					</div>
+
+				<li><a href="/thesis/login.php" class="cool"> <i class="fa fa-user"></i> Login </a>
+				<li><a href="search.php" class="cool"> <i class="fa fa-search"></i> Search </a>
+				<li><?php  if (isset($_SESSION['user'])) : ?>
+        			<a><i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+        				<strong><?php echo $_SESSION['user']['username']; ?></strong></a>
+					
+
+						<!-- Dropdown nav of login --> 		
+
+					<div class="sub-nav-1">
+						<ul>
+						  <li> <a href="create_user.php"> Create Users </a> </li>
+						  <li> <a href="usersdata.php"> Users </a> </li>
+					      <li> <a href="home.php?logout='1'" style="color: red;"> EXIT </a> </li>
+   							 <?php endif ?>	</a>
+
+						</ul>
+					</div>
+
+</header>
+
+<body>
+
+		<div class="heading">
+								
+								<br><br><br><br><br><br>
+
+							<h1> Alphabet </h1>
+						
+		</div>
+
+		<div class="position">	
+
+						
+						<div class="FIRST">
+						<img src="/thesis/images/ei.jpg">
+						<img src="/thesis/images/bol.jpg">
+						<img src="/thesis/images/si.jpg">
+						<img src="/thesis/images/doll.jpg">
+						<img src="/thesis/images/elephant.jpg">
+						</div>
+						
+						<div class="SECOND">
+						<img src="/thesis/images/fish.jpg">
+						<img src="/thesis/images/girl.jpg">
+						<img src="/thesis/images/hat.jpg">
+						<img src="/thesis/images/ice.jpg">
+						<img src="/thesis/images/jug.jpg">
+						</div>
+						
+						<div class="THIRD">
+						<img src="/thesis/images/king.jpg">
+						<img src="/thesis/images/lion.jpg">
+						<img src="/thesis/images/monkey.jpg">
+						<img src="/thesis/images/nest.jpg">
+						<img src="/thesis/images/owl.jpg">
+						</div>
+						
+						<div class="FOURTH">
+						<img src="/thesis/images/parrot.jpg">
+						<img src="/thesis/images/queen.jpg">
+						<img src="/thesis/images/rocket.jpg">
+						<img src="/thesis/images/ship.jpg">
+						<img src="/thesis/images/top.jpg">
+						</div>
+						
+						<div class="THIRD">
+						<img src="/thesis/images/umbrella.jpg">
+						<img src="/thesis/images/violin.jpg">
+						<img src="/thesis/images/watch.jpg">
+						<img src="/thesis/images/xmas.jpg">
+						<img src="/thesis/images/yoyo.jpg">
+						</div>
+						
+						<div class="last">
+						<img src="/thesis/images/zebra.jpg">
+						</div>
+					</div>
+						
+						
+						<div class="videos">
+						
+						<br><br><bR>
+
+						<h1> Alphabet Songs </h1>
+											
+
+						<iframe width="450" height="300" src="https://www.youtube.com/embed/BELlZKpi1Zs" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+						<iframe width="450" height="300" src="https://www.youtube.com/embed/tJxSr7bZMJg" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						
+						</div>
+						
+						
+						</div>
+					
+
+						<div class="videos">
+
+							<iframe width="450" height="300" src="https://www.youtube.com/embed/r8iGnwD8i9I" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+						<iframe width="450" height="300" src="https://www.youtube.com/embed/FlF5MCykyZg" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						
+						</body>
+					</div>
+				
+
+						<footer>
+
+
+
+
+
+						<div class="container">
+								Copyright &copy; 2020 Kindergarten 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Contact Us: kindergartenmc39@gmail.com
+						</div>
+
+			</footer>
+						
+						</html>
+
+
+						<?php 
+	 if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: home.php");
+  }
+?>
