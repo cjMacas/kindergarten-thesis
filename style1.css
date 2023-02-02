@@ -1,0 +1,173 @@
+header{
+	font-family: Arial, sans-serif;
+}
+body{
+	color: black;
+	font-family: Courier, monospace;
+	text-align: center;
+}
+.mission-h{
+	border: 1px transparent;
+	width: 100%;
+	height: 40vh;
+	background-color: #0095b6;
+}
+
+p{
+	margin-top: 30px;
+}
+.about-h{
+	border: 1px transparent;
+	width: 100%;
+	height: 62vh;
+	background-color: #fff;
+	
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Cabin|Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Simonetta&display=swap');
+
+article{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.tag h1{
+	font-family: 'Pacifico';
+	width: 100%;
+	height: 10vh;
+	background-color :#0095b6;
+	font-size: 35px;
+}
+.team{
+	display: flex;
+	text-align: center;
+	width: auto;
+	justify-content: center;
+	background: #0095b6;
+	
+}
+.team .name{
+	background: #fff;
+	margin: 40px;
+	margin-top: 50px;
+	width: 300px;
+	padding: 20px;
+	line-height: 20px;
+	color: #8e8b8b;
+	position: relative;
+	border-radius: 10%;
+	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.team .name h3{
+	color: #0095b6;
+	font-size: 26px;
+	margin-top: 70px;
+}
+.team .name p.role{
+	color: #a09f9d;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 12px;
+
+}
+.team .name .name-img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute; 
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+	background: #fff;
+
+}
+
+.team .name .name-img img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	padding: 10px;
+	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Mga sumusunod na codes is para sa icons ng soocial sites */ 
+section{
+	text-align: center;
+	
+
+
+}
+.social ul {
+	top: 50%;
+	left: 50%;
+	padding: 0;
+	margin: 0;
+	transform: translate(-50%, 2550%);
+	display: flex;
+	position: absolute;
+	
+}
+.social ul li {
+	list-style: none;
+	margin: 0 15px;
+}
+.social ul li .fa{
+	 color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social ul li .fa:hover {
+    color: #ffffff;
+}
+
+.social ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+  	text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.social ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social ul li:nth-child(3) a:hover {
+    background-color: #800000;
+}
+.social ul li:nth-child(4) a:hover {
+    background-color: 	#D4AF37	;
+}
+.tag1{
+	background: #0095b6;
+	height: 30vh;
+}
+footer{
+	font-family: Arial, sans-serif;
+}
+table{
+					border-collapse: collapse;
+					width: 100%
+					color #fff;
+					font-family: monospace;
+					font-size: 25px;
+					text-align: left;
+					}
+					th{
+						background-color: #d96459;
+						color: white;
+					}
